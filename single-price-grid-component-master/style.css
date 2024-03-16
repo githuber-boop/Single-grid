@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  font-family: 'Karla', sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_container {
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: #fff;
+    /* padding: 2em; */
+}
+.footer_heading {
+    padding: 2em;
+
+}
+
+.footer_heading h1{
+    color: hsl(179, 62%, 43%);
+}
+
+.footer_heading h3 {
+    color: hsl(71, 73%, 54%);
+}
+
+.footer_heading p {
+    color: hsl(218, 22%, 67%);
+}
+
+.footer_content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+
+}
+
+.footer_content .subscription {
+    background-color: hsl(179, 62%, 43%);
+    padding: 2em;
+}
+
+.subscription span {
+    color: hsl(204, 43%, 93%);
+    font-size: 0.5em;
+}
+
+.footer_content .why_us {
+    background-color: hsl(179, 71%, 54%);
+    padding: 2em;
+
+}
+
+.subscription h2{
+    font-size: 2em;
+}
+
+.subscription h3{
+    font-size: 1.5em;
+    /* margin: 0; */
+}
+
+.subscription a {
+    background-color:hsl(71, 73%, 54%);
+    padding: 1em 4em;
+    display: inline-block;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: hsl(36, 100%, 99%) ;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    transition:background-color 0.5s ease;
+}
+
+.why_us p{
+    color: hsl(204, 43%, 93%);
+}
+
+@media only screen and (max-width:800px) {
+    .footer_content {
+        grid-template-columns: 1fr;
+    }
+}
